@@ -14,8 +14,8 @@ if (isset($_POST['length'])){
     if (isset($_POST['upper_case']) && $_POST['upper_case'] == 'on')
         $characters .= $upper_case;
      
-    if (isset($_POST['upper_case']) && $_POST['upper_case'] == 'on')
-        $characters .= $upper_case;
+    if (isset($_POST['numbers']) && $_POST['numbers'] == 'on')
+        $characters .= $numbers;
      
     if (isset($_POST['symbols']) && $_POST['symbols'] == 'on')
         $characters .= $symbols;
@@ -26,7 +26,7 @@ if (isset($_POST['length'])){
 	$length = 15;
 }
 
-$string_length = strlen($characters)
+$string_length = strlen($characters);
 $passwd = '';
 
 for ($i = 0; $i < $length; $i++) {
@@ -34,3 +34,5 @@ for ($i = 0; $i < $length; $i++) {
 }
 
 $passwd = str_shuffle($passwd);
+
+?>
